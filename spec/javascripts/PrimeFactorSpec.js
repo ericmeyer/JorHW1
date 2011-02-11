@@ -6,42 +6,42 @@ describe("PrimeFactor", function() {
   });
 
 	it("factors 1", function() {
-		expect(1).toFactorTo([]);
+		expect(prime_factor.factor(1)).toBeComposedOf([]);
 	});
 
   it("factors 2", function() {
-		expect(2).toFactorTo([2])
+		expect(prime_factor.factor(2)).toBeComposedOf([2]);
   });
 
 	it("factors 3", function() {
-		expect(3).toFactorTo([3]);
+	  expect(prime_factor.factor(3)).toBeComposedOf([3]);
 	});
 
 	it("factors 4", function() {
-		expect(4).toFactorTo([2, 2])
+	  expect(prime_factor.factor(4)).toBeComposedOf([2, 2]);
 	});
 
 	it("factors 5", function() {
-		expect(5).toFactorTo([5]);
+	  expect(prime_factor.factor(5)).toBeComposedOf([5]);
 	});
 	
 	it("factors 6", function() {
-		expect(6).toFactorTo([2, 3]);
+	  expect(prime_factor.factor(6)).toBeComposedOf([2, 3]);
 	});
 
 	it("factors 7", function() {
-		expect(7).toFactorTo([7]);
+	  expect(prime_factor.factor(7)).toBeComposedOf([7]);
 	});
 
 	it("factors 8", function() {
-		expect(8).toFactorTo([2, 2, 2]);
+	  expect(prime_factor.factor(8)).toBeComposedOf([2, 2, 2]);
 	});
 	
 	it("factors 9", function() {
-		expect(9).toFactorTo([3, 3]);
+	  expect(prime_factor.factor(9)).toBeComposedOf([3, 3]);
 	});
 	
 	it("factors a complicated example", function() {
-	  expect(2*2*3*3*5*11*13*13*17).toFactorTo([2, 2, 3, 3, 5, 11, 13, 13, 17])
+	  expect(prime_factor.factor(2*2*3*3*5*11*13*13*17)).toBeComposedOf([2, 2, 3, 3, 5, 11, 13, 13, 17])
 	});
 });
