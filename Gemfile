@@ -28,4 +28,5 @@ gem 'sqlite3'
 # and rake tasks are available in development mode:
 group :development, :test do
   gem 'jasmine'
+  gem 'mongrel', '~> 1.2.0.pre2'
 end
